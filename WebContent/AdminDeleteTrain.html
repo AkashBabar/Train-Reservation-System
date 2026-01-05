@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Trains | Cancel Train</title>
+<link rel="stylesheet" href="CSS/AdminDeleteTrain.css">
+</head>
+
+<body>
+
+	<!-- ================= Header / Navbar ================= -->
+	<header class="navbar">
+		<div class="brand">
+			<h1 class="hd">National Ticket Booking Spot</h1>
+		</div>
+
+		<nav class="nav-links">
+			<a href="AdminHome.html" class="active">Home</a> <a
+				href="adminviewtrainfwd">View Trains</a> <a
+				href="adminsearchtrainfwd">Search Train</a> <a href="addtrainfwd">Add
+				Train</a> <a href="cancletrainfwd">Delete Train</a> <a
+				href="updatetrain">Update Train</a> <a href="adminlogout"
+				class="logout">Logout</a>
+		</nav>
+	</header>
+
+	<!-- ================= Page Title ================= -->
+	<section class="page-title">
+		<h2>Cancel Train</h2>
+		<p>Safely remove a train from active operations.</p>
+	</section>
+
+	<!-- ================= Card ================= -->
+	<section class="card">
+		<p class="menu">
+			⚠️ <strong>Important Notice</strong><br> <br> Deleting a
+			train is irreversible. Ensure the train number is correct before
+			proceeding.
+		</p>
+
+		<form action="admincancletrain" method="post" class="train-form">
+			<label>Train Number</label> <input type="text" name="trainno"
+				placeholder="Enter Train Number" required> <input
+				type="submit" value="Cancel Train">
+		</form>
+	</section>
+
+</body>
+</html>

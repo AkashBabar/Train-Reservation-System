@@ -1,0 +1,218 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #0f172a;
+}
+
+/* Dark overlay for readability */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: -1;
+}
+/* ================= Navbar ================= */
+header.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	margin-bottom: 0px;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+}
+
+.brand h1 {
+	font-family: serif, fantasy, "Segoe UI", Tahoma, Geneva, Verdana,
+		sans-serif;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: rgb(128, 255, 255);
+	margin-right: 5px;
+	letter-spacing: 1px;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 1.4rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background: #0a2e6d;
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+
+/* ======================== Page Title ======================== */
+.hd {
+	text-align: center;
+	margin: 5px 0 5px;
+}
+
+.hd h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: rgb(255, 255, 255);
+	margin-bottom: 5px;
+}
+
+/* ======================== Card Logos ======================== */
+.inlineimage {
+	text-align: center;
+	padding: 12px;
+}
+
+.images {
+	display: inline-block;
+	width: 70px;
+	margin: 6px;
+	filter: grayscale(10%);
+	transition: transform 0.2s ease;
+}
+
+.images:hover {
+	transform: scale(1.08);
+}
+
+/* ======================== Payment Card ======================== */
+.panel {
+	border-radius: 14px;
+	border: none;
+	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+
+.panel-heading {
+	background: linear-gradient(90deg, #0f4c81, #1976d2) !important;
+	padding: 15px;
+}
+
+.panel-body {
+	padding: 15px;
+	background: #ffffff;
+}
+
+/* ======================== Inputs ======================== */
+.form-group label {
+	font-weight: 600;
+	color: #1f2937;
+	margin-bottom: 5px;
+}
+
+.form-control {
+	height: 46px;
+	font-size: 15px;
+	border-radius: 8px;
+	border: 1.5px solid #cbd5e1;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+	border-color: #2563eb;
+	box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+	outline: none;
+}
+
+/* ======================== Footer & Button ======================== */
+.panel-footer {
+	background: #f8fafc;
+	padding: 10px;
+	border-top: 1px solid #e2e8f0;
+}
+
+.btn-success {
+	background: linear-gradient(to right, #16a34a, #22c55e);
+	border: none;
+	font-size: 1.05rem;
+	font-weight: 700;
+	letter-spacing: 0.6px;
+	border-radius: 10px;
+	padding: 12px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-success:hover {
+	background: linear-gradient(to right, #15803d, #16a34a);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ======================== Responsive ======================== */
+@media ( max-width : 768px) {
+	.hd h1 {
+		font-size: 1.8rem;
+	}
+}
+
+/* ======================== Responsive Design ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+		text-align: center;
+	}
+	.brand h1 {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.user-home-container {
+		margin: 30px 15px;
+		padding: 28px 25px;
+	}
+	.train-form {
+		grid-template-columns: 1fr;
+	}
+	.train-form label, .train-form input, .train-form select {
+		grid-column: span 1;
+	}
+}
+
+@media ( max-width : 480px) {
+	.welcome-title {
+		font-size: 1.6rem;
+	}
+	.welcome-text {
+		font-size: 0.95rem;
+	}
+	.nav-links a {
+		font-size: 0.9rem;
+		padding: 6px 10px;
+	}
+}

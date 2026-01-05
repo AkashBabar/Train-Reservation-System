@@ -1,0 +1,258 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #0f172a;
+}
+
+/* Dark overlay */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: -1;
+}
+
+/* ======================== Navbar ======================== */
+.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+}
+
+/* ======================== Brand ======================== */
+.brand h1 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: rgb(128, 255, 255);
+	letter-spacing: 1px;
+}
+
+/* ======================== Navigation Links ======================== */
+.nav-links {
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background-color: #0a2e6d;
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+/* ======================== Main Content (Forms) ======================== */
+.main-content {
+	max-width: 500px;
+	width: 90%;
+	margin: 30px auto;
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.main-content h2 {
+	font-size: 26px;
+	color: #0f4c81;
+	margin-bottom: 10px;
+}
+
+.main-content p {
+	font-size: 15px;
+	color: #555;
+	margin-bottom: 25px;
+}
+
+/* ======================== Forms ======================== */
+.search-form, .train-form {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.form-group label, .train-form label {
+	font-weight: 600;
+	color: #333;
+}
+
+.form-group input, .train-form input {
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+}
+
+.form-group input:focus, .train-form input:focus {
+	outline: none;
+	border-color: #1976d2;
+	box-shadow: 0 0 6px rgba(25, 118, 210, 0.3);
+}
+
+/* ======================== Buttons ======================== */
+button {
+	padding: 12px;
+	background: #1976d2;
+	color: #fff;
+	font-size: 15px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: background 0.3s ease;
+}
+
+button:hover {
+	background: #0f4c81;
+}
+
+/* ===================================================== */
+/* ========== SERVLET TRAIN LIST OUTPUT STYLES ========== */
+/* ===================================================== */
+
+/* Title container */
+.main {
+	max-width: 95%;
+	margin: 10px auto 10px;
+	text-align: center;
+}
+
+/* Page heading (p1 used in servlet) */
+.menu {
+	display: inline-block;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	color: #fff;
+	padding: 12px 25px;
+	border-radius: 30px;
+	font-size: 18px;
+	font-weight: 600;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Table wrapper */
+.tab {
+	max-width: 95%;
+	margin: 20px auto 40px;
+	background: rgba(255, 255, 255, 0.96);
+	padding: 18px;
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+	overflow-x: auto;
+}
+
+/* ======================== Table ======================== */
+.tab table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 14px;
+}
+
+.tab th {
+	background: #0f4c81;
+	color: #fff;
+	padding: 12px;
+	font-weight: 600;
+}
+
+.tab td {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+}
+
+.tab tr:nth-child(even) {
+	background: #f1f5f9;
+}
+
+.tab tr:hover {
+	background: #e3f2fd;
+}
+
+/* ======================== Book Now Button ======================== */
+.tab a {
+	text-decoration: none;
+}
+
+.red {
+	background: linear-gradient(135deg, #e53935, #b71c1c);
+	color: #fff;
+	padding: 8px 14px;
+	border-radius: 20px;
+	font-size: 13px;
+	font-weight: 600;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+.red:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 12px rgba(229, 57, 53, 0.5);
+}
+
+/* ======================== No Data Message ======================== */
+.tab .menu {
+	background: #e53935;
+}
+
+/* ======================== Responsive ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+	}
+	.brand h1 {
+		width: 100%;
+		text-align: center;
+	}
+	.tab table {
+		font-size: 13px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.menu {
+		font-size: 16px;
+		padding: 10px 18px;
+	}
+	.red {
+		font-size: 12px;
+		padding: 7px 12px;
+	}
+}

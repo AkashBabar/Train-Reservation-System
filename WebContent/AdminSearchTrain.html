@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Trains | Search Train</title>
+<link rel="stylesheet" href="CSS/AdminSearchTrain.css">
+</head>
+
+<body>
+
+	<!-- ================= Header / Navbar ================= -->
+	<header class="navbar">
+		<div class="brand">
+			<h1 class="hd">National Ticket Booking Spot</h1>
+		</div>
+
+		<nav class="nav-links">
+			<a href="AdminHome.html">Home</a> <a href="adminviewtrainfwd">View
+				Trains</a> <a href="adminsearchtrainfwd" class="active">Search Train</a>
+			<a href="addtrainfwd">Add Train</a> <a href="cancletrainfwd">Delete
+				Train</a> <a href="updatetrain">Update Train</a> <a href="adminlogout"
+				class="logout">Logout</a>
+		</nav>
+	</header>
+
+	<!-- ================= Page Title ================= -->
+	<section class="page-title">
+		<h2>Search Train</h2>
+		<p>Retrieve specific train information using the official train
+			number</p>
+	</section>
+
+	<!-- ================= Search Form Card ================= -->
+	<section class="card">
+		<form action="adminsearchtrain" method="post" class="train-form">
+
+			<label for="trainnumber">Train Number</label> <input type="text"
+				id="trainnumber" name="trainnumber" placeholder="e.g. 12345"
+				required> <input type="submit" value="Search Train"
+				class="btn-submit">
+
+		</form>
+	</section>
+
+</body>
+</html>

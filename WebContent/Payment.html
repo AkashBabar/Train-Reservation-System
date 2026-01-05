@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Secure Payment</title>
+
+<!-- Bootstrap 3 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Custom Common CSS (Navbar, background) -->
+<link rel="stylesheet" href="CSS/Payment.css">
+
+</head>
+
+<body>
+
+	<!-- ================= Header ================= -->
+	<header class="navbar">
+		<div class="brand">
+			<h1>National Ticket Booking Spot</h1>
+		</div>
+
+		<nav class="nav-links">
+			<a href="userhome" class="active">Home</a> <a href="userviewtrainfwd">View
+				Trains</a> <a href="trainbwstnfwd">Trains Between Stations</a> <a
+				href="bookingdetails">Booking History</a> <a href="fareenqfwd">Fare
+				Enquiry</a> <a href="useravailfwd">Seat Availability</a> <a
+				href="usersearchtrain">Search Train</a> <a href="userprofile">Profile</a>
+			<a href="userlogout" class="logout">Logout</a>
+		</nav>
+	</header>
+	<!-- ================= Page Title ================= -->
+	<div class="hd">
+		<h1>Secure Card Payment</h1>
+	</div>
+
+	<!-- ================= Payment Form ================= -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3">
+
+				<div class="panel panel-default">
+
+					<div class="panel-heading">
+						<div class="inlineimage">
+							<img class="images"
+								src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png">
+							<img class="images"
+								src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png">
+							<img class="images"
+								src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png">
+							<img class="images"
+								src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png">
+						</div>
+					</div>
+
+					<form action="booktrains" method="post">
+
+						<div class="panel-body">
+
+							<div class="form-group">
+								<label>CARD NUMBER</label> <input type="tel"
+									class="form-control" placeholder="1234 5678 9012 3456" required>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-7">
+									<div class="form-group">
+										<label>EXPIRY DATE</label> <input type="text"
+											class="form-control" placeholder="MM / YY" required>
+									</div>
+								</div>
+								<div class="col-xs-5">
+									<div class="form-group">
+										<label>CVV</label> <input type="password" class="form-control"
+											placeholder="***" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label>CARD HOLDER NAME</label> <input type="text"
+									class="form-control" placeholder="Name on Card" required>
+							</div>
+
+						</div>
+
+						<div class="panel-footer">
+							<input type="submit" value="Confirm Payment"
+								class="btn btn-success btn-lg btn-block">
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<!-- Scripts -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</html>

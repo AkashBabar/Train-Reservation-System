@@ -1,0 +1,207 @@
+/* ======================== Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Overlay */
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.35);
+	z-index: -1;
+}
+
+/* ======================== HEADER (ADMIN STYLE) ======================== */
+header.user-home-header {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 20px 30px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+	margin-bottom: 40px;
+}
+
+/* Title */
+.user-home-header .hd {
+	font-size: 2rem;
+	font-weight: 700;
+	color: white;
+	margin-right: 25px;
+}
+
+/* Menu container */
+.home {
+	display: flex;
+	align-items: center;
+}
+
+/* Menu links */
+.menu a {
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover {
+	background-color: rgb(0, 0, 128);
+	transform: translateY(-2px);
+}
+
+/* ======================== PAGE CENTER ======================== */
+.page-center {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ======================== REGISTER CARD ======================== */
+.register-container {
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 35px 30px;
+	border-radius: 20px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+	width: 500px;
+	height: auto;
+	max-width: 95%;
+	text-align: center;
+	transition: transform 0.3s ease;
+	position: relative;
+}
+
+.register-container:hover {
+	transform: translateY(-6px);
+}
+
+.register-container h2 {
+	color: rgb(0, 0, 128);
+	font-size: 2rem;
+	margin-bottom: 25px;
+}
+
+/* ======================== REGISTER FORM ======================== */
+.register-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px 20px;
+	text-align: left;
+}
+
+.register-form label {
+	grid-column: span 2;
+	font-weight: 600;
+	color: #333;
+}
+
+.register-form input {
+	grid-column: span 2;
+	padding: 12px;
+	border: 1.5px solid #bdbdbd;
+	border-radius: 10px;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+	border-color: rgb(0, 0, 255);
+	box-shadow: 0 0 8px rgb(0, 0, 255);
+	outline: none;
+}
+
+/* ======================== BUTTON ======================== */
+.btn-register {
+	grid-column: span 2;
+	background-color: rgb(0, 0, 128);
+	color: white;
+	padding: 14px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-top: 10px;
+}
+
+.btn-register:hover {
+	background-color: rgb(0, 0, 255);
+	transform: scale(1.05);
+}
+
+/* ======================== SUCCESS / ERROR MESSAGES ======================== */
+.tab {
+	grid-column: span 2;
+	margin-top: 15px;
+	padding: 12px;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.success-msg {
+	background-color: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.error-msg {
+	background-color: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+}
+
+/* Ensure message spans full form width */
+#message {
+	grid-column: span 2;
+	width: 100%;
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media ( max-width : 768px) {
+	header.user-home-header {
+		justify-content: center;
+	}
+	.user-home-header .hd {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.register-form {
+		grid-template-columns: 1fr;
+	}
+	.register-form label, .register-form input, .btn-register, #message {
+		grid-column: span 1;
+	}
+}
+
+@media ( max-width : 480px) {
+	.register-container {
+		padding: 25px 20px;
+	}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Trains | Add Train</title>
+<link rel="stylesheet" href="CSS/AdminAddTrains.css">
+</head>
+<body>
+
+	<!-- ================= Header / Navbar ================= -->
+	<header class="navbar">
+		<div class="brand">
+			<h1 class="hd">National Ticket Booking Spot</h1>
+		</div>
+
+		<nav class="nav-links">
+			<a href="AdminHome.html">Home</a> <a href="adminviewtrainfwd">View
+				Trains</a> <a href="adminsearchtrainfwd">Search Train</a> <a
+				href="addtrainfwd" class="active">Add Train</a> <a
+				href="cancletrainfwd">Delete Train</a> <a href="updatetrain">Update
+				Train</a> <a href="adminlogout" class="logout">Logout</a>
+		</nav>
+	</header>
+
+	<!-- ================= Page Title ================= -->
+	<section class="page-title">
+		<h2>Add New Train</h2>
+		<p>Enter train details carefully to add a new train to the system.</p>
+	</section>
+
+	<!-- ================= Add Train Form ================= -->
+	<section class="card">
+		<form action="adminaddtrain" method="post" class="train-form">
+
+			<div class="form-group">
+				<label>Train Number</label> <input type="text" name="trainno"
+					placeholder="Enter Train Number" required>
+			</div>
+
+			<div class="form-group">
+				<label>Train Name</label> <input type="text" name="trainname"
+					placeholder="Enter Train Name" required>
+			</div>
+
+			<div class="form-group">
+				<label>From Station</label> <input type="text" name="fromstation"
+					placeholder="Source Station" required>
+			</div>
+
+			<div class="form-group">
+				<label>To Station</label> <input type="text" name="tostation"
+					placeholder="Destination Station" required>
+			</div>
+
+			<div class="form-group">
+				<label>Available Seats</label> <input type="number" name="available"
+					placeholder="Available Seats" required>
+			</div>
+
+			<div class="form-group">
+				<label>Fare (INR)</label> <input type="number" name="fare"
+					placeholder="Fare Amount" required>
+			</div>
+
+			<input type="submit" value="Add Train" class="btn-submit">
+
+		</form>
+	</section>
+
+</body>
+</html>

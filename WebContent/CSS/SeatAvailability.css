@@ -1,0 +1,245 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #0f172a;
+}
+
+/* Dark overlay for readability */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: -1;
+}
+
+/* ======================== Navbar ======================== */
+.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+}
+
+/* ======================== Brand ======================== */
+.brand h1 {
+	font-family: serif, fantasy, "Segoe UI", Tahoma, Geneva, Verdana,
+		sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: rgb(128, 255, 255);
+	margin-right: 5px;
+	letter-spacing: 1px;
+}
+
+/* ======================== Navigation Links ======================== */
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background-color: #0a2e6d;
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+/* ======================== Main Content (Form Page) ======================== */
+.main-content {
+	max-width: 500px;
+	width: 100%;
+	margin: 30px auto;
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.main-content h2 {
+	font-size: 26px;
+	color: #0f4c81;
+	margin-bottom: 10px;
+}
+
+.main-content p {
+	font-size: 15px;
+	color: #555;
+	margin-bottom: 25px;
+}
+
+/* ======================== Form ======================== */
+.search-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-group {
+	text-align: left;
+}
+
+.form-group label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+}
+
+.form-group input:focus {
+	outline: none;
+	border-color: #1976d2;
+}
+
+/* ======================== Button ======================== */
+button {
+	padding: 12px;
+	background: #1976d2;
+	color: #ffffff;
+	font-size: 15px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: background 0.3s ease;
+}
+
+button:hover {
+	background: #0f4c81;
+}
+
+/* ======================== Result Containers ======================== */
+.tab {
+	max-width: 900px;
+	margin: 15px auto;
+	background: rgba(255, 255, 255, 0.95);
+	padding: 18px;
+	border-radius: 12px;
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	overflow-x: auto;
+}
+
+.main {
+	max-width: 900px;
+	margin: 10px auto;
+	background: rgba(255, 255, 255, 0.95);
+	padding: 18px;
+	border-radius: 12px;
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+	text-align: center;
+}
+
+/* ======================== Text Styles ======================== */
+.menu {
+	font-size: 18px;
+	font-weight: 600;
+	color: #0f4c81;
+}
+
+.red {
+	color: #e53935;
+	font-weight: 700;
+}
+
+/* ======================== Train Table ======================== */
+.train-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 700px;
+	margin-top: 10px;
+}
+
+.train-table th, .train-table td {
+	border: 1px solid #cbd5e1;
+	padding: 12px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.train-table th {
+	background-color: #0f4c81;
+	color: white;
+	font-weight: 600;
+}
+
+.train-table td {
+	background-color: #f8fafc;
+}
+
+/* ======================== Responsive Design ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+	}
+	.brand h1 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.main-content {
+		margin: 30px 15px;
+		padding: 25px;
+	}
+	.tab, .main {
+		margin: 20px 15px;
+		padding: 15px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.main-content h2 {
+		font-size: 1.6rem;
+	}
+	.main-content p {
+		font-size: 0.95rem;
+	}
+	.train-table th, .train-table td {
+		font-size: 14px;
+		padding: 10px;
+	}
+}

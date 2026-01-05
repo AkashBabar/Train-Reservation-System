@@ -1,0 +1,280 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #0f172a;
+}
+
+/* Dark overlay for readability */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: -1;
+}
+
+/* ======================== Navbar ======================== */
+.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+	margin-bottom: 0px;
+}
+
+/* ======================== Brand ======================== */
+.brand h1 {
+	font-family: serif, fantasy, "Segoe UI", Tahoma, Geneva, Verdana,
+		sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: rgb(128, 255, 255);
+	margin-right: 5px;
+	letter-spacing: 1px;
+}
+
+/* ======================== Navigation Links ======================== */
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background-color: #0a2e6d;
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+/* ================= Main Content ================= */
+.main-content {
+	max-width: 1000px;
+	margin: 30px auto 40px;
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.main-content h2 {
+	font-size: 28px;
+	color: rgb(255, 0, 0);
+	margin-bottom: 10px;
+}
+
+.main-content p {
+	font-size: 15px;
+	color: #555;
+	margin-bottom: 25px;
+}
+
+/* ================= Train Table ================= */
+.train-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+.train-table th, .train-table td {
+	padding: 14px 10px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+.train-table th {
+	background: #1976d2;
+	color: #ffffff;
+	font-weight: 600;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+.train-table tr:nth-child(even) {
+	background: #f9f9f9;
+}
+
+.train-table tr:hover {
+	background: #f1f7ff;
+}
+
+/* ================= Booking Button ================= */
+.book-btn {
+	display: inline-block;
+	background: #e53935;
+	color: #ffffff;
+	padding: 8px 16px;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+	background: #c62828;
+	transform: translateY(-2px);
+}
+
+/* ================= Page Title ================= */
+.title {
+	max-width: 900px;
+	margin: 40px auto 15px;
+	text-align: center;
+}
+
+.title .menu {
+	font-size: 26px;
+	font-weight: 700;
+	color: rgb(255, 0, 0);
+	letter-spacing: 0.5px;
+}
+
+/* ======================== Booking Form Container ======================== */
+.tab {
+	max-width: 900px;
+	margin: 20px auto 40px;
+	background: #ffffff;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================== Booking Table ======================== */
+.tab table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 15px;
+}
+
+.tab td {
+	padding: 12px 10px;
+	border-bottom: 1px solid #e0e0e0;
+	color: #1f2937;
+	font-weight: 500;
+}
+
+/* ======================== Inputs & Select ======================== */
+.tab input[type="text"], .tab input[type="number"], .tab input[type="date"],
+	.tab select {
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 6px;
+	border: 1px solid #cbd5e1;
+	font-size: 14px;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab input:focus, .tab select:focus {
+	border-color: #1976d2;
+	box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
+	outline: none;
+}
+
+/* ======================== Submit Button ======================== */
+.tab input[type="submit"] {
+	background: #1976d2;
+	color: #ffffff;
+	border: none;
+	padding: 12px 28px;
+	font-size: 15px;
+	border-radius: 6px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tab input[type="submit"]:hover {
+	background: #0f4c81;
+	transform: translateY(-2px);
+}
+
+/* ======================== Title Text ======================== */
+.menu {
+	font-size: 20px;
+	font-weight: 700;
+	color: #d32f2f;
+	text-align: center;
+}
+
+/* ======================== Responsive Design ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+	}
+	.brand h1 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.user-home-container {
+		margin: 30px 15px;
+		padding: 28px 25px;
+	}
+	.train-form {
+		grid-template-columns: 1fr;
+	}
+	.train-form label, .train-form input {
+		grid-column: span 1;
+	}
+}
+
+@media ( max-width : 480px) {
+	.welcome-title {
+		font-size: 1.6rem;
+	}
+	.welcome-text {
+		font-size: 0.95rem;
+	}
+}
+
+@media ( max-width : 768px) {
+	.tab table, .tab tr, .tab td {
+		display: block;
+		width: 100%;
+	}
+	.tab td {
+		border-bottom: none;
+		padding: 10px 0;
+	}
+	.tab input, .tab select {
+		width: 100%;
+	}
+}

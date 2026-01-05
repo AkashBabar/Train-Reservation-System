@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Trains | Trains Between Stations</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="CSS/TrainsBwStn.css">
+</head>
+<body>
+
+	<!-- ======================== Navbar ======================== -->
+	<header class="navbar">
+		<div class="brand">
+			<h1>National Ticket Booking Spot</h1>
+		</div>
+
+		<nav class="nav-links">
+			<a href="userhome" class="active">Home</a> <a href="userviewtrainfwd">View
+				Trains</a> <a href="trainbwstnfwd">Trains Between Stations</a> <a
+				href="bookingdetails">Booking History</a> <a href="fareenqfwd">Fare
+				Enquiry</a> <a href="useravailfwd">Seat Availability</a> <a
+				href="usersearchtrain">Search Train</a> <a href="userprofile">Profile</a>
+			<a href="userlogout" class="logout">Logout</a>
+		</nav>
+	</header>
+
+	<!-- ======================== Page Content ======================== -->
+	<main class="main-content">
+		<h2>Trains Between Stations</h2>
+		<p>Search available trains between two stations</p>
+
+		<form action="trainbwstn" method="post" class="search-form">
+			<div class="form-group">
+				<label>From Station</label> <input type="text" name="fromstation"
+					placeholder="Enter source station" required>
+			</div>
+
+			<div class="form-group">
+				<label>To Station</label> <input type="text" name="tostation"
+					placeholder="Enter destination station" required>
+			</div>
+
+			<button type="submit">Search Train</button>
+		</form>
+	</main>
+
+</body>
+</html>

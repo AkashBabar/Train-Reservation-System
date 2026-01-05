@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Login - National Ticket Booking Spot</title>
+<link rel="stylesheet" href="CSS/AdminLogin.css">
+</head>
+<body>
+
+	<!-- ======================== Header (Admin Style) ======================== -->
+	<header class="user-home-header">
+		<h1 class="hd">National Ticket Booking Spot</h1>
+
+		<div class="home">
+			<p class="menu">
+				<a href="UserLogin.html">User Login</a>
+			</p>
+		</div>
+
+		<div class="home">
+			<p class="menu">
+				<a href="UserRegister.html">New User Register</a>
+			</p>
+		</div>
+
+		<div class="home">
+			<p class="menu">
+				<a href="AdminLogin.html">Admin Login</a>
+			</p>
+		</div>
+	</header>
+
+	<!-- ======================== Admin Login Section ======================== -->
+	<main class="page-center">
+		<div class="login-container">
+			<h2>Admin Login</h2>
+
+			<form action="adminlogin" method="post" class="login-form">
+				<label>Username</label> <input type="text" name="uname"
+					placeholder="Enter Admin Username" required> <label>Password</label>
+				<input type="password" name="pword" placeholder="Enter Password"
+					required>
+
+				<button type="submit" class="btn-login">Login</button>
+			</form>
+		</div>
+	</main>
+
+</body>
+</html>

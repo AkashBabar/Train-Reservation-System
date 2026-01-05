@@ -1,0 +1,250 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Overlay for better readability */
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.35);
+	z-index: -1;
+}
+
+/* ======================== Navbar ======================== */
+.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 20px 30px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Brand / Logo */
+.brand h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: white;
+	margin-right: 25px;
+}
+
+/* Navigation Links */
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background-color: rgb(0, 0, 128);
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+/* ======================== Page Title ======================== */
+.page-title {
+	text-align: center;
+	margin: 40px 20px 30px;
+	color: white;
+}
+
+.page-title h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.page-title p {
+	font-size: 1rem;
+}
+
+/* ======================== Card Container ======================== */
+.card {
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 35px 30px;
+	border-radius: 20px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+	width: 500px;
+	max-width: 95%;
+	margin: 0 auto 50px;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-6px);
+}
+
+/* ======================== Form Styling ======================== */
+.train-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px 20px;
+	text-align: left;
+}
+
+.train-form label {
+	grid-column: span 2;
+	font-weight: 600;
+	color: #333;
+}
+
+.train-form input {
+	grid-column: span 2;
+	padding: 12px;
+	border: 1.5px solid #bdbdbd;
+	border-radius: 10px;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.train-form input:focus {
+	border-color: rgb(0, 0, 255);
+	box-shadow: 0 0 8px rgb(0, 0, 255);
+	outline: none;
+}
+
+/* ======================== Table Card ======================== */
+.table-card {
+	padding: 30px;
+	width: 60%;
+}
+
+/* ======================== Table Wrapper ======================== */
+.table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+}
+
+/* ======================== Train Table ======================== */
+.train-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 750px;
+}
+
+/* ======================== Table Header ======================== */
+.train-table th {
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	color: #ffffff;
+	padding: 14px;
+	font-size: 14px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+/* ======================== Table Data ======================== */
+.train-table td {
+	padding: 12px;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+/* ======================== Alternate Row ======================== */
+.train-table tr:nth-child(even) {
+	background-color: #f5f9ff;
+}
+
+/* ======================== Hover Effect ======================== */
+.train-table tr:hover {
+	background-color: #e3f2fd;
+	transition: background 0.3s ease;
+}
+
+/* ======================== Train Name Link ======================== */
+.train-table td a {
+	color: #0f4c81;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.train-table td a:hover {
+	color: #1976d2;
+	text-decoration: underline;
+}
+
+/* ======================== Action Button ======================== */
+.train-table td:last-child a {
+	display: inline-block;
+	padding: 6px 16px;
+	background: #1976d2;
+	color: #ffffff;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: 600;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.train-table td:last-child a:hover {
+	background: #0f4c81;
+	transform: translateY(-1px);
+}
+/* ======================== Responsive Design ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+	}
+	.brand h1 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.train-form {
+		grid-template-columns: 1fr;
+	}
+	.train-form label, .train-form input, .btn-submit {
+		grid-column: span 1;
+	}
+}
+
+@media ( max-width : 480px) {
+	.card {
+		padding: 25px 20px;
+	}
+	.page-title h2 {
+		font-size: 1.6rem;
+	}
+	.page-title p {
+		font-size: 0.9rem;
+	}
+}

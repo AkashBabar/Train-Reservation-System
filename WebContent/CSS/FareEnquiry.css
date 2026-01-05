@@ -1,0 +1,232 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #0f172a;
+}
+
+/* Dark overlay */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: -1;
+}
+
+/* ======================== Navbar ======================== */
+.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+	margin-bottom: 20px;
+}
+
+.brand h1 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #80ffff;
+	letter-spacing: 1px;
+}
+
+/* ======================== Nav Links ======================== */
+.nav-links {
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background-color: #0a2e6d;
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+/* ======================== Main Container ======================== */
+.main, .main-content {
+	max-width: 600px;
+	width: 100%;
+	margin: 25px auto;
+	line-height: 1.6;
+	background: #ffffff;
+	padding: 15px;
+	border-radius: 14px;
+	text-align: center;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+	margin-top: 5px;
+}
+.main-content h2 {
+    margin-bottom: 5px;
+    color: rgb(0, 64, 128);
+}
+
+/* ======================== Titles ======================== */
+.menu {
+	font-size: 20px;
+	font-weight: 700;
+	color: #0f4c81;
+	margin-bottom: 5px;
+	padding: 5px;
+	display: block;
+}
+
+
+
+/* ======================== Form ======================== */
+.search-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form-group label {
+	font-weight: 600;
+	margin-bottom: 6px;
+	color: #333;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+.form-group input:focus {
+	border-color: #1976d2;
+	outline: none;
+}
+
+/* ======================== Button ======================== */
+button {
+	padding: 12px;
+	background: #1976d2;
+	color: #ffffff;
+	font-size: 15px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: 0.3s ease;
+}
+
+button:hover {
+	background: #0f4c81;
+}
+
+/* ======================== Table Section (Servlet Output) ======================== */
+.tab {
+	max-width: 1100px;
+	width: 100%;
+	margin: 10px auto;
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 14px;
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+	overflow-x: auto;
+	margin-top: 5px;
+}
+
+.tab table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.tab th {
+	background: linear-gradient(90deg, #1976d2, #0f4c81);
+	color: #ffffff;
+	padding: 12px;
+	font-size: 14px;
+}
+
+.tab td {
+	padding: 12px;
+	font-size: 14px;
+	border-bottom: 1px solid #e0e0e0;
+	text-align: center;
+}
+
+.tab tr:hover {
+	background-color: #f1f5f9;
+}
+
+/* ======================== Book Now Button ======================== */
+.red {
+	background: #e53935;
+	color: #ffffff;
+	padding: 8px 14px;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	display: inline-block;
+	transition: 0.3s ease;
+}
+
+.red:hover {
+	background: #c62828;
+	transform: scale(1.05);
+}
+
+/* ======================== Links ======================== */
+a {
+	text-decoration: none;
+}
+
+/* ======================== Responsive ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+	}
+	.brand h1 {
+		width: 100%;
+		text-align: center;
+	}
+	.menu {
+		font-size: 18px;
+	}
+}
+
+@media ( max-width : 480px) {
+	.menu {
+		font-size: 16px;
+	}
+	.tab th, .tab td {
+		font-size: 12px;
+		padding: 8px;
+	}
+}

@@ -1,0 +1,194 @@
+/* ======================== Global Reset ======================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================== Body ======================== */
+body {
+	background-image: url('../Images/train3.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: #0f172a;
+}
+
+/* Dark overlay for readability */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: -1;
+}
+
+/* ======================== Navbar ======================== */
+.navbar {
+	width: 100%;
+	background: linear-gradient(90deg, #0f4c81, #1976d2);
+	padding: 18px 30px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+}
+
+/* ======================== Brand ======================== */
+.brand h1 {
+	font-family: serif, fantasy, "Segoe UI", Tahoma, Geneva, Verdana,
+		sans-serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: rgb(128, 255, 255);
+	margin-right: 5px;
+	letter-spacing: 1px;
+}
+
+/* ======================== Navigation Links ======================== */
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 8px 14px;
+	border-radius: 8px;
+	transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+	background-color: #0a2e6d;
+	transform: translateY(-2px);
+}
+
+.nav-links .logout {
+	background-color: #e53935;
+}
+
+.nav-links .logout:hover {
+	background-color: #c62828;
+}
+
+/* ======================== User Home Content ======================== */
+.user-home-container {
+	max-width: 900px;
+	margin: 50px auto;
+	padding: 35px 40px;
+	background-color: rgba(255, 255, 255, 0.97);
+	border-radius: 14px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Titles & Text */
+.welcome-title {
+	font-size: 1.9rem;
+	color: #0f172a;
+	margin-bottom: 15px;
+}
+
+.welcome-text {
+	font-size: 1rem;
+	color: #334155;
+	line-height: 1.7;
+	margin-bottom: 28px;
+}
+
+/* Information Boxes */
+.info-box {
+	padding: 18px 20px;
+	background-color: #f8fafc;
+	border-left: 5px solid #1976d2;
+	border-radius: 10px;
+	margin-bottom: 22px;
+}
+
+.info-box h3 {
+	color: #1e40af;
+	font-size: 1.15rem;
+	margin-bottom: 6px;
+}
+
+.info-box p {
+	color: #475569;
+	line-height: 1.6;
+}
+
+/* Footer Note */
+.footer-note {
+	margin-top: 30px;
+	font-weight: 600;
+	color: #15803d;
+	text-align: center;
+}
+
+/* ======================== Form ======================== */
+.train-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px 20px;
+	margin-top: 20px;
+}
+
+.train-form label {
+	grid-column: span 2;
+	font-weight: 600;
+	color: #1f2937;
+}
+
+.train-form input {
+	grid-column: span 2;
+	padding: 12px 14px;
+	border: 1.5px solid #cbd5e1;
+	border-radius: 10px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.train-form input:focus {
+	border-color: #2563eb;
+	box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+	outline: none;
+}
+
+/* ======================== Responsive Design ======================== */
+@media ( max-width : 768px) {
+	.navbar {
+		justify-content: center;
+	}
+	.brand h1 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.user-home-container {
+		margin: 30px 15px;
+		padding: 28px 25px;
+	}
+	.train-form {
+		grid-template-columns: 1fr;
+	}
+	.train-form label, .train-form input {
+		grid-column: span 1;
+	}
+}
+
+@media ( max-width : 480px) {
+	.welcome-title {
+		font-size: 1.6rem;
+	}
+	.welcome-text {
+		font-size: 0.95rem;
+	}
+}

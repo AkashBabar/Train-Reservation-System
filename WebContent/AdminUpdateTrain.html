@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Trains | Update Train</title>
+<link rel="stylesheet" href="CSS/AdminUpdateTrain.css">
+</head>
+<body>
+
+	<!-- ================= Header / Navbar ================= -->
+	<header class="navbar">
+		<div class="brand">
+			<h1 class="hd">National Ticket Booking Spot</h1>
+		</div>
+
+		<nav class="nav-links">
+			<a href="AdminHome.html">Home</a> <a href="adminviewtrainfwd">View
+				Trains</a> <a href="adminsearchtrainfwd">Search Train</a> <a
+				href="addtrainfwd">Add Train</a> <a href="cancletrainfwd">Delete
+				Train</a> <a href="updatetrain" class="active">Update Train</a> <a
+				href="adminlogout" class="logout">Logout</a>
+		</nav>
+	</header>
+
+	<!-- ================= Page Title ================= -->
+	<section class="page-title">
+		<h2>Update Train Details</h2>
+		<p>Search a train by Train Number to update its information.</p>
+	</section>
+
+	<!-- ================= Update Train Card ================= -->
+	<section class="card">
+		<p class="menu">
+			Enter the <strong>Train Number</strong> below to fetch existing train
+			details and proceed with updating.
+		</p>
+
+		<form action="adminupdatetrain" method="post" class="train-form">
+			<div class="form-group">
+				<label>Train Number</label> <input type="text" name="trainnumber"
+					placeholder="Enter Train Number" required>
+			</div>
+			<input type="submit" value="Search Train" class="btn-submit">
+		</form>
+	</section>
+
+</body>
+</html>
